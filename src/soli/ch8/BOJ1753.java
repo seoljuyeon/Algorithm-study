@@ -36,7 +36,7 @@ public class BOJ1753 implements P56_1753 {
 
         distance = new int[V+1];
         visited = new boolean[V+1];
-        for(int i = 0 ; i <= V ; i++){
+        for(int i = 1 ; i <= V ; i++){
             // 제일 큰 값 넣어놓고 비교 해야하기 때문에 넣어놓기
             distance[i] = Integer.MAX_VALUE;
             visited[i] = false;
@@ -44,7 +44,7 @@ public class BOJ1753 implements P56_1753 {
         // 시작값은 0으로
         distance[K] = 0;
 
-        for(int i = 0 ; i < E ; i++) {
+        for(int i = 0 ; i <= E ; i++) {
             // 간선을 나타내는 세 개의 정수 u,v,w
             st = new StringTokenizer(br.readLine());
 
@@ -79,7 +79,7 @@ public class BOJ1753 implements P56_1753 {
 
                 if(distance[next_to] > distance[current_to] + next_value) {
                     distance[next_to] = distance[current_to] + next_value;
-                    Q.add(new Node(next_to, next_value));
+                    Q.add(new Node(next_to, distance[next_to]));
                 }
             }
         }
