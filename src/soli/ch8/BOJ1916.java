@@ -76,6 +76,11 @@ public class BOJ1916 implements P57_1916 {
             }
             visited[current_to] = true;
 
+            if(current_to == end) {
+                System.out.println(costArray[end]);
+                return;
+            }
+
             for(Node next : arr[current_to]) {
                 int next_to = next.to;
                 int next_value = next.value;
@@ -89,7 +94,7 @@ public class BOJ1916 implements P57_1916 {
                 }
             }
         }
-        System.out.println(costArray[end]);
+//        System.out.println(costArray[end]);
     }
 
     static class Node implements Comparable<Node> {
