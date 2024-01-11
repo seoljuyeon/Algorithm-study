@@ -1,5 +1,7 @@
 package juyeon.ch8;
 
+import doitproblems.ch8_graph.P59_11657;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,7 +20,7 @@ class Bus {
     }
 }
 
-public class P59_11657_타임머신 {
+public class P59_11657_타임머신 implements P59_11657 {
 
     static int N, M;
     static int INF = Integer.MAX_VALUE;

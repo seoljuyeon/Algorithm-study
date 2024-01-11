@@ -1,5 +1,7 @@
 package juyeon.ch8;
 
+import doitproblems.ch8_graph.P56_1753;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,7 +24,7 @@ class Node implements Comparable<Node> {
     }
 }
 
-public class P56_1753_최단_경로 {
+public class P56_1753_최단_경로 implements P56_1753 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());

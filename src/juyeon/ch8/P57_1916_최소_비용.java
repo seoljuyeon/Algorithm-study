@@ -1,5 +1,7 @@
 package juyeon.ch8;
 
+import doitproblems.ch8_graph.P57_1916;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,7 +24,7 @@ class Edge implements Comparable<Edge> {
     }
 }
 
-public class P57_1916_최소_비용 {
+public class P57_1916_최소_비용 implements P57_1916 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
