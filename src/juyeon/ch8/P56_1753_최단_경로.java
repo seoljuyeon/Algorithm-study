@@ -18,7 +18,7 @@ class Node implements Comparable<Node> {
 
     @Override
     public int compareTo(Node o) {
-        return (this.cost > o.cost ? 1 : -1);
+        return this.cost - o.cost;
     }
 }
 
