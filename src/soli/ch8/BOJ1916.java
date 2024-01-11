@@ -78,7 +78,8 @@ public class BOJ1916 implements P57_1916 {
 
             if(current_to == end) {
                 System.out.println(costArray[end]);
-                return;
+                break;
+                // return 문보다
             }
 
             for(Node next : arr[current_to]) {
