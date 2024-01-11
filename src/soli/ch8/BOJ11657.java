@@ -12,7 +12,7 @@ public class BOJ11657 implements P59_11657 {
 
     static int N, M;
     static ArrayList<Edge>[] edges;
-    static int distance[];
+    static long distance[]; // int로 하면 출력 초과남
 
 
     public static void main(String[] args) throws IOException {
@@ -27,7 +27,7 @@ public class BOJ11657 implements P59_11657 {
         M = Integer.parseInt(st.nextToken());
 
         edges = new ArrayList[M+1];
-        distance = new int[N+1];
+        distance = new long[N + 1];
         for(int i = 1 ; i <= N ; i++) {
             distance[i] = Integer.MAX_VALUE;
         }
