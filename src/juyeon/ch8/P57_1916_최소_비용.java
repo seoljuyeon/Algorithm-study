@@ -18,7 +18,7 @@ class Edge implements Comparable<Edge> {
 
     @Override
     public int compareTo(Edge o) {
-        return (this.cost > o.cost ? 1 : -1);
+        return this.cost - o.cost;
     }
 }
 
