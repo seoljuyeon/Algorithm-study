@@ -49,17 +49,16 @@ public class BOJ11404 implements P61_11404 {
             int C = Integer.parseInt(st.nextToken());
 
             // 기존 배열보다 크면 바꾸기
-            if(D[A][B] > C) {
-                D[A][B] = C;
-            }
+             D[A][B] = Math.min(D[A][B], C);
+//            if(D[A][B] > C) {
+//                D[A][B] = C;
+//            }
         }
 
         for(int k = 1; k <= N ; k++) {
             for(int s = 1; s <= N ; s++ ) {
                 for(int e = 1; e <= N ; e++) {
-                    if(D[s][e] > D[s][k] + D[k][e]) {
-                        D[s][e] = D[s][k] + D[k][e];
-                    }
+                    D[s][e] = Math.min(D[s][e], D[s][k] + D[k][e]);
                 }
             }
         }
@@ -75,6 +74,4 @@ public class BOJ11404 implements P61_11404 {
             System.out.println();
         }
     }
-
-
 }
