@@ -65,20 +65,22 @@ public class BOJ1197 implements P64_1197 {
         }
         return parent[x] = find(parent[x]);
     }
-}
-class Edge implements Comparable<Edge> {
-    int start;
-    int end;
-    int value;
 
-    public Edge(int start, int end, int value) {
-        this.start = start;
-        this.end = end;
-        this.value = value;
-    }
+    static class Edge implements Comparable<soli.ch8.Edge> {
+        int start;
+        int end;
+        int value;
 
-    @Override
-    public int compareTo(Edge o) {
-        return this.value - o.value;
+        public Edge(int start, int end, int value) {
+            this.start = start;
+            this.end = end;
+            this.value = value;
+        }
+
+        @Override
+        public int compareTo(soli.ch8.Edge o) {
+            return this.value - o.value;
+        }
     }
 }
+
