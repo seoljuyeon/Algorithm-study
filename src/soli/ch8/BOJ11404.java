@@ -10,7 +10,6 @@ public class BOJ11404 implements P61_11404 {
 
     static int N;
     static int M;
-
     static int[][] D;
 
     public static void main(String[] args) throws IOException {
@@ -57,6 +56,7 @@ public class BOJ11404 implements P61_11404 {
         for(int k = 1; k <= N ; k++) {
             for(int s = 1; s <= N ; s++ ) {
                 for(int e = 1; e <= N ; e++) {
+                    // 최단 거리 배열 그래프 데이터 저장
                     if (D[s][k] < 1000000000 && D[k][e] < 1000000000) {
                         D[s][e] = Math.min(D[s][e], D[s][k] + D[k][e]);
                     }
