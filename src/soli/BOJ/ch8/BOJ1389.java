@@ -1,11 +1,10 @@
-package soli.ch8;
+package soli.BOJ.ch8;
 
 import doitproblems.ch8_graph.P63_1389;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class BOJ1389 implements P63_1389 {

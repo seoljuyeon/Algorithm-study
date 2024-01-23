@@ -1,4 +1,4 @@
-package soli.ch8;
+package soli.BOJ.ch8;
 
 import doitproblems.ch8_graph.P64_1197;
 
@@ -66,7 +66,7 @@ public class BOJ1197 implements P64_1197 {
         return parent[x] = find(parent[x]);
     }
 
-    static class Edge implements Comparable<soli.ch8.Edge> {
+    static class Edge implements Comparable<soli.BOJ.ch8.Edge> {
         int start;
         int end;
         int value;
@@ -78,7 +78,7 @@ public class BOJ1197 implements P64_1197 {
         }
 
         @Override
-        public int compareTo(soli.ch8.Edge o) {
+        public int compareTo(soli.BOJ.ch8.Edge o) {
             return this.value - o.value;
         }
     }

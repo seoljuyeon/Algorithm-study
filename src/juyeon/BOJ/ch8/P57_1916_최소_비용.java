@@ -1,4 +1,4 @@
-package juyeon.ch8;
+package juyeon.BOJ.ch8;
 
 import doitproblems.ch8_graph.P57_1916;
 
