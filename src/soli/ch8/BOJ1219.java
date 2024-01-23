@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
+// 벨만 포드
 public class BOJ1219 implements P60_1219 {
 
     static int N, M;
@@ -55,7 +56,7 @@ public class BOJ1219 implements P60_1219 {
         }
 
         // 도시별 이득 정보를 저장할 배열
-        int[] profit = new int[N];
+        profit = new int[N];
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
             profit[i] = Integer.parseInt(st.nextToken());

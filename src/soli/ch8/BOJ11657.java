@@ -95,7 +95,7 @@ public class BOJ11657 implements P59_11657 {
     static class Edge {
         int from;   // 출발
         int to;     // 시작
-        int value;  // 도착
+        int value;  // 도착 시간
 
         public Edge(int from, int to, int value) {
             this.from = from;
