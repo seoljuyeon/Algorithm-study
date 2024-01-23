@@ -1,9 +1,8 @@
-package soli.ch8;
+package soli.BOJ.ch8;
 
 import doitproblems.ch8_graph.P61_11404;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class BOJ11404 implements P61_11404 {

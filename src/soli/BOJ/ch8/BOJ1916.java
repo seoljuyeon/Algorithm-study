@@ -1,4 +1,4 @@
-package soli.ch8;
+package soli.BOJ.ch8;
 
 import doitproblems.ch8_graph.P57_1916;
 
