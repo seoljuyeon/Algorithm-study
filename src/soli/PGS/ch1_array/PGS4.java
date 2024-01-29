@@ -4,7 +4,7 @@ public class PGS4 {
 
     public int[] solution(String[][] places) {
         int[] answer = new int[places.length];
-
+        //
         for (int i = 0; i < places.length; i++) {
             answer[i] = checkPlace(places[i]) ? 1 : 0;
         }
@@ -13,6 +13,7 @@ public class PGS4 {
     }
 
     private boolean checkPlace(String[] place) {
+        // 행렬 5 * 5
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 if (place[i].charAt(j) == 'P' && !isSafe(place, i, j)) {
