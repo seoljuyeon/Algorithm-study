@@ -35,7 +35,7 @@ public class P01_교점에_별_만들기 {
 
 //    AE - BD = 0 일 때, 두 직선은 평행
 
-    public static String[] solution(int[][] line) {
+    private static String[] solution(int[][] line) {
         String[] answer = {};
 
         HashSet<Point> set = new HashSet<>();
