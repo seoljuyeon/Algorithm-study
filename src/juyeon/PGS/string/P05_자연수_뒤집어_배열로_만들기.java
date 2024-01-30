@@ -25,4 +25,23 @@ public class P05_자연수_뒤집어_배열로_만들기 {
 
         return answer;
     }
+
+    private static int[] solution2(long n) {
+        String str = "" + n;
+        int[] answer = new int[str.length()];
+
+        int i = 0;
+
+        while (n > 0) {
+            answer[i] = (int) (n % 10);
+            n /= 10;
+            i++;
+        }
+
+        return answer;
+    }
+
+    private static int[] solution3(long n) {
+        return new StringBuilder().append(n).reverse().chars().map(Character::getNumericValue).toArray();
+    }
 }
