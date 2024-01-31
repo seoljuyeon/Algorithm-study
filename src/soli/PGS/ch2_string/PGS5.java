@@ -17,4 +17,10 @@ public class PGS5 {
 
         return answer;
     }
+
+    public static void main(String[] args) {
+        PGS5 pgs5 = new PGS5();
+
+        System.out.println("Test case : " + pgs5.solution(12345));  // [5,4,3,2,1]
+    }
 }
