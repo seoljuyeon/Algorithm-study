@@ -56,11 +56,22 @@ public class P01_교점에_별_만들기 {
                 long m = A * E - B * D;
                 if (m == 0) continue;
 
+                /*
                 long x = (B * F - C * E) / (A * E - B * D);
                 long y = (C * D - A * F) / (A * E - B * D);
 
                 // x, y가 정수 좌표가 아닐 때
                 if (!(x % 1 == 0 && y % 1 == 0)) continue;
+                */
+
+                long bfce = B * F - C * E;
+                if (bfce % m != 0) continue;
+
+                long cdaf = C * D - A * F;
+                if (cdaf % m != 0) continue;
+
+                long x = bfce/m;
+                long y = cdaf/m;
 
                 set.add(new Point(x, y));
 
