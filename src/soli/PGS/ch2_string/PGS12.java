@@ -3,10 +3,16 @@ package soli.PGS.ch2_string;
 // https://school.programmers.co.kr/learn/courses/30/lessons/81301
 public class PGS12 {
     public int solution(String s) {
-        int answer = 0;
-        return answer;
-    }
 
+        String[] nums = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+
+        for(int i= 0 ; i < nums.length ; i++) {
+            if(s.contains(nums[i])) {
+                s = s.replace(nums[i], Integer.toString(i));
+            }
+        }
+        return Integer.parseInt(s);
+    }
     public static void main(String[] args) {
         PGS12 pgs12 = new PGS12();
 
