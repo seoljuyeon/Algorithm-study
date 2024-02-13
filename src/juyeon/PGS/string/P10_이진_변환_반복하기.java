@@ -17,13 +17,6 @@ public class P10_이진_변환_반복하기 {
         int count = 0;
         int zero = 0;
 
-//        while (!s.equals("1")) {
-//            count++;
-//            s = s.replace("0", "");
-//            int c = s.length();
-//            s = Integer.toString(c, 2);
-//        }
-
         while (!s.equals("1")) {
             count++;
             int one = 0;
