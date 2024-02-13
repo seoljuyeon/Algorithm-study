@@ -7,7 +7,6 @@ public class PGS11_lambda {
 
         return s.chars().filter( e -> 'p' == e).count() == s.chars().filter(e -> 'y' == e).count();
 
-//        s.chars().filter( e -> 'P'== e).count() == s.chars().filter( e -> 'Y'== e).count();
     }
 
     public static void main(String[] args) {
