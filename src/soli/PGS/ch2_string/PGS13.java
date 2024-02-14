@@ -8,7 +8,14 @@ public class PGS13 {
     }
 
     public boolean solution(String s) {
-        boolean answer = true;
-        return answer;
+
+        if(s.length() != 4 && s.length() != 6) {
+            return false;
+        }
+        if(s.matches("^[0-9]+")) {
+            return true;
+        }
+        return false;
+
     }
 }
