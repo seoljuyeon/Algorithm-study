@@ -1,3 +1,5 @@
+package soli.PGS.ch_array;
+
 import java.util.*;
 
 class PGS24 {
