@@ -23,8 +23,8 @@ class PGS24 {
     }
 
   public static void main(String[] args){
-    PGS24 pgs24 = new PGS24;
-    System.out.println("Test case1 : " + Arrays.toString(pgs24.solution(new int[]{2,1,3,4,1});
-    System.out.println("Test case2 : " + Arrays.toString(pgs24.solution(new int[]{5,0,2,7});
+    PGS24 pgs24 = new PGS24();
+    System.out.println("Test case1 : " + Arrays.toString(pgs24.solution(new int[]{2,1,3,4,1})));
+    System.out.println("Test case2 : " + Arrays.toString(pgs24.solution(new int[]{5,0,2,7})));
   }
 }
