@@ -2,7 +2,7 @@ package soli.PGS.ch_array;
 
 import java.util.*;
 
-class Solution {
+class PGS26 {
     public String solution(String s) {
         
         char[] c = s.toCharArray();
