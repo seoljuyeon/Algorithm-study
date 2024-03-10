@@ -28,7 +28,7 @@ public class P28_가장_큰_수 {
         return sb.toString();
     }
 
-    // 이렇게 풀면 3, 33, 35 일 때 제대로 큰 수 못 만들더라고요~
+    // 이렇게 풀면 3, 30, 35 일 때 제대로 큰 수 못 만들더라고요~
 //    private static String solution(int[] numbers) {
 //        String answer = "";
 //
