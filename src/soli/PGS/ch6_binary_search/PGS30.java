@@ -3,71 +3,59 @@ package soli.PGS.ch6_binary_search;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 public class PGS30 {
+    static HashMap<String, List<Integer>> map;
 
-    static HashMap<String, ArrayList<Integer>> map = new HashMap<>();
-    static ArrayList<Integer> score = new ArrayList<>();
+    public static int[] solution(String[] info, String[] query) {
+        int[] answer = new int[query.length];
+        map = new HashMap<String, List<Integer>>();
 
-    public int[] solution(String[] info, String[] query) {
-        int[] answer = {};
-
-        for(String i : info) {
-            dfs(0, "", i.split(" "));
+        for (int i = 0; i < info.length; i++) {
+            String[] p = info[i].split(" ");
+            makeSentence(p, "", 0);
         }
 
-        for(ArrayList<Integer> list : map.values()) {
-            Collections.sort(list);
+        for (String key : map.keySet())
+            Collections.sort(map.get(key));
+
+        for (int i = 0; i < query.length; i++) {
+            query[i] = query[i].replaceAll(" and ", "");
+            String[] q = query[i].split(" ");
+            answer[i] = map.containsKey(q[0]) ? binarySearch(q[0], Integer.parseInt(q[1])) : 0;
         }
 
-        answer = new int[query.length];
-        int i = 0 ;
-        for(String q : query) {
-            String[] data = q.split(" and ");
-
-            String[] s = data[3].split(" ");
-            int target = Integer.parseInt(s[1]);
-            data[3] = s[0];
-
-            String key = String.join("", data);
-
-            if(map.containsKey(key)){
-                ArrayList<Integer> list = map.get(key);
-
-                int start = 0;
-                int end = list.size() - 1;
-
-                while(start <= end) {
-                    int mid = (start + end) / 2;
-
-                    if(list.get(mid) < target) {
-                        start = mid + 1;
-                    } else {
-                        end = mid - 1;
-                    }
-                }
-                answer[i] = list.size()-start;
-            }
-            i++;
-        }
         return answer;
     }
 
-    static void dfs(int depth, String query, String[] info) {
-        if(depth == 4) {
-            if(!map.containsKey(query)) {
-                score = new ArrayList<>();
-                score.add(Integer.parseInt(info[4]));   // 점수 추가
-                map.put(query, score);
-            } else {
-                map.get(query).add(Integer.parseInt(info[4]));
-            } return;
+    // 이분 탐색
+    private static int binarySearch(String key, int score) {
+        List<Integer> list = map.get(key);
+        int start = 0, end = list.size() - 1;
+
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (list.get(mid) < score)
+                start = mid + 1;
+            else
+                end = mid - 1;
         }
-        dfs(depth + 1, query + "-", info);
-        dfs(depth + 1, query + info[depth], info);
+
+        return list.size() - start;
     }
 
-    public static void main(String[] args) {
-
+    // info가 포함될 수 있는 문장
+    private static void makeSentence(String[] p, String str, int cnt) {
+        if (cnt == 4) {
+            if (!map.containsKey(str)) {
+                List<Integer> list = new ArrayList<Integer>();
+                map.put(str, list);
+            }
+            map.get(str).add(Integer.parseInt(p[4]));
+            return;
+        }
+        makeSentence(p, str + "-", cnt + 1);
+        makeSentence(p, str + p[cnt], cnt + 1);
     }
 }
