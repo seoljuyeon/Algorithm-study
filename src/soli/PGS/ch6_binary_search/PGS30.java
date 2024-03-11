@@ -1,9 +1,6 @@
 package soli.PGS.ch6_binary_search;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class PGS30 {
     static HashMap<String, List<Integer>> map;
@@ -57,5 +54,21 @@ public class PGS30 {
         }
         makeSentence(p, str + "-", cnt + 1);
         makeSentence(p, str + p[cnt], cnt + 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(solution(    // [1,1,1,1,2,4]
+                new String[]{"java backend junior pizza 150",
+                        "python frontend senior chicken 210",
+                        "python frontend senior chicken 150",
+                        "cpp backend senior pizza 260",
+                        "java backend junior chicken 80",
+                        "python backend senior chicken 50"},
+                new String[]{"java and backend and junior and pizza 100",
+                        "python and frontend and senior and chicken 200",
+                        "cpp and - and senior and pizza 250",
+                        "- and backend and senior and - 150",
+                        "- and - and - and chicken 100",
+                        "- and - and - and - 150"})));
     }
 }
