@@ -39,6 +39,7 @@ public class P30_순위_검색 {
         return answer;
     }
 
+    // "java backend junior pizza 150"
     private static void DFS(String[] info, String str, int depth) {
         if (depth == 4) {
             int score = Integer.parseInt(info[depth]);
@@ -52,15 +53,17 @@ public class P30_순위_검색 {
             return;
         }
 
-        DFS(info, str + "-", depth + 1);
-        DFS(info, str + info[depth], depth + 1);
+        DFS(info, str + "-", depth + 1); // -, --, java-
+        DFS(info, str + info[depth], depth + 1); // java, -be, javabe
     }
 
+    // "cpp and - and senior and pizza 250"
     private static int binarySearch(String query) {
         String[] arr = query.split(" and ");
-        int score = Integer.parseInt(arr[3].split(" ")[1]);
+        int score = Integer.parseInt(arr[3].split(" ")[1]); // 250
 
         query = arr[0] + arr[1] + arr[2] + arr[3].split(" ")[0];
+        // "cpp-seniorpizza"
 
         if (!map.containsKey(query)) return 0;
 
