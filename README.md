@@ -1,6 +1,6 @@
 # Java Coding Test 👩‍💻🧑‍💻
 코딩 테스트를 위한 스터디입니다. <br/>
-[~240105](https://github.com/luminousol/DoitJavaCote)
+[🔗 DoitJavaCote (~240105)](https://github.com/NtoZero/DoitJavaCote)
 
 <br/>
 
