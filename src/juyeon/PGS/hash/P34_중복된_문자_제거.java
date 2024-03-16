@@ -17,8 +17,6 @@ public class P34_중복된_문자_제거 {
             if (!map.containsKey(c)) {
                 map.put(c, 1);
                 sb.append(c);
-            } else {
-                continue;
             }
         }
 
