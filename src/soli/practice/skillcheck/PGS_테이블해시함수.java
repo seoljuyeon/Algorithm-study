@@ -24,4 +24,15 @@ public class PGS_테이블해시함수 {
 
         return hash;
     }
+
+    public static void main(String[] args) {
+        PGS_테이블해시함수 solution = new PGS_테이블해시함수();
+        int[][] data = {{2, 2, 6}, {1, 5, 10}, {4, 2, 9}, {3, 8, 3}};
+        int col = 2;
+        int rowBegin = 2;
+        int rowEnd = 3;
+
+        // 함수 실행 및 결과 출력
+        System.out.println(solution.solution(data, col, rowBegin, rowEnd));
+    }
 }
