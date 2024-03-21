@@ -16,8 +16,9 @@ public class BOJ11726 {
 
         for(int i = 3 ; i <= N ; i++) {
             bp[i] = (bp[i-2] + bp[i-1]) % 10007;
+//            bp[i] = (bp[i-2] + bp[i-1]) ;
         }
         System.out.println(bp[N]);
-//        System.out.println(bp[N]%10007); 실패
+//        System.out.println(bp[N]%10007);
     }
 }
