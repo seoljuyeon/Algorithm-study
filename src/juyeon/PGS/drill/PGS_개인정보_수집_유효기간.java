@@ -1,4 +1,4 @@
-package juyeon;
+package juyeon.PGS.drill;
 
 import java.util.*;
 
