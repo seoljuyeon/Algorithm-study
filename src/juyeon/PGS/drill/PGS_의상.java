@@ -16,8 +16,12 @@ public class PGS_의상 {
 
         int answer = 1;
 
-        for(String key : map.keySet()) {
-            answer *= map.get(key) + 1;
+//        for(String key : map.keySet()) {
+//            answer *= map.get(key) + 1;
+//        }
+
+        for (int e : map.values()) {
+            answer += e + 1;
         }
 
         // 아무것도 안 입은 경우는 제외니까 -1 해주기
