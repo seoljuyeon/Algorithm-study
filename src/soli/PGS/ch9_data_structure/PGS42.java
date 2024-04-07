@@ -13,15 +13,15 @@ public class PGS42 {
             if(s.charAt(i) == '('){
                 stack.add(s.charAt(i));
             } else {
-                if(!stack.isEmpty()){
-                    stack.pop();
+                if(stack.isEmpty()){
+                    return answer = false;
                 } else {
-                    answer = false;
+                    stack.pop();
                 }
             }
         }
 
-        return answer;
+        return stack.isEmpty() ? true : false;
 
     }
 
@@ -31,7 +31,7 @@ public class PGS42 {
         System.out.println(pgs42.solution("()()")); // true
         System.out.println(pgs42.solution("(())()")); // true
         System.out.println(pgs42.solution(")()(")); // false
-
+        System.out.println(pgs42.solution(	"(()(")); // false
     }
 
 }
