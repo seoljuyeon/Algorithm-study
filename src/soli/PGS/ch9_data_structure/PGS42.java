@@ -9,9 +9,9 @@ public class PGS42 {
         boolean answer = true;
 
         Stack<Character> stack = new Stack<>();
-        for(int i = 0 ; i < s.length() ; i++) {
-            if(s.charAt(i) == '('){
-                stack.add(s.charAt(i));
+        for(char c : s.toCharArray()) {
+            if(c == '('){
+                stack.add(c);
             } else {
                 if(stack.isEmpty()){
                     return answer = false;
@@ -21,7 +21,7 @@ public class PGS42 {
             }
         }
 
-        return stack.isEmpty() ? true : false;
+        return stack.isEmpty();
 
     }
 
