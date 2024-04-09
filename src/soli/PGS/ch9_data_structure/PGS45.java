@@ -1,9 +1,6 @@
 package soli.PGS.ch9_data_structure;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class PGS45 {
     public int[] solution(int[] progresses, int[] speeds){
@@ -19,10 +16,10 @@ public class PGS45 {
             q.add(n);
         }
 
-        while(!q.isEmpty()){
+        while(!q.isEmpty()) {
             int head = q.poll();
             int count = 1;
-            if(!q.isEmpty() && head > q.peek()) {
+            while(!q.isEmpty() && head >= q.peek()) {
                 q.poll();
                 count++;
             }
@@ -33,6 +30,9 @@ public class PGS45 {
     }
 
     public static void main(String[] args) {
+        PGS45 pgs45 = new PGS45();
 
+//        System.out.println(Arrays.toString(pgs45.solution(new int[] {93, 30, 55}, new int[] {1, 30, 5})));
+        System.out.println(Arrays.toString(pgs45.solution(new int[] {95, 90, 99, 99, 80, 99}, new int[] {1, 1, 1, 1, 1, 1})));
     }
 }
