@@ -1,25 +1,48 @@
 package soli.PGS.ch9_data_structure;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+class Node {
+    int x;  // x좌표
+    int y;  // y좌표
+    int id;
+    Node left;   // 왼쪽 자식 -> 자식 노드를 가짐
+    Node right;  // 오른쪽 자식 -> 자식 노드를 가짐
+
+    public Node(int x, int y, int id) {
+        this.x = x;
+        this.y = y;
+        this.id = id;
+        this.left = null;
+        this.right = null;
+    }
+}
 
 public class PGS47 {
 
-
-    ArrayList<int[]>[] a;
+    Node node;
 
     public int[][] solution(int[][] nodeinfo) {
 
-        int[][] answer = new int[2][nodeinfo.length];
+        List<Node> nodes = new ArrayList<>();
 
-
-        a = new ArrayList[nodeinfo.length + 1];
-        for(int i = 1; i <= nodeinfo.length ; i++){
-            a[i] = new ArrayList<int[]>();
+        // 노드 입력
+        for(int i = 0 ; i < nodeinfo.length ; i++) {
+            nodes.add(new Node(nodeinfo[i][0], nodeinfo[i][1], i+1));
         }
 
+        Collections.sort(nodes, new Comparator<Node>() {
+            @Override
+            public int compare(Node o1, Node o2) {
+                return 0;
+            }
+        });
 
 
-
+        int answer[][] = {};
         return answer;
     }
 
