@@ -1,9 +1,25 @@
 package soli.PGS.ch9_data_structure;
 
+import java.util.ArrayList;
+
 public class PGS47 {
 
-    public int solution(int n, int[][] results) {
-        int answer = 0;
+
+    ArrayList<int[]>[] a;
+
+    public int[][] solution(int[][] nodeinfo) {
+
+        int[][] answer = new int[2][nodeinfo.length];
+
+
+        a = new ArrayList[nodeinfo.length + 1];
+        for(int i = 1; i <= nodeinfo.length ; i++){
+            a[i] = new ArrayList<int[]>();
+        }
+
+
+
+
         return answer;
     }
 
