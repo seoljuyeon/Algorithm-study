@@ -25,7 +25,7 @@ public class PGS47 {
 
     Node node;
 
-    public int[][] solution(int[][] nodeinfo) {
+    public int[][] solution(int i, int[][] nodeinfo) {
 
         List<Node> nodes = new ArrayList<>();
 
