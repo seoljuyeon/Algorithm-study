@@ -4,47 +4,27 @@ import java.util.*;
 
 public class PGS52 {
 
-    public int[] solution(String[] gems) {
-        int[] answer = new int[2];
+    public long[] solution(long k, long[] room_number) {
 
-        Set<String> set = new HashSet<>();
-        for(String gem : gems) {
-            set.add(gem);
-        }
-        Map<String, Integer> map = new HashMap<>();
+        // 배정되어 있으면 원하는 방보다 크면서 비어있는 방 중 가장 작은 방
+        long[] answer = new long[room_number.length];
+        boolean[] check = new boolean[(int)k + 1];
 
-        int min = Integer.MAX_VALUE;
-
-        int start = 0;
-        int end = 0;
-
-        while(end < gems.length) {
-            map.put(gems[end], map.getOrDefault(gems[end], 0)+1);
-
-            while(map.size() == set.size()) {
-                if(end - start < min) {
-                    min = end - start;
-                    answer[0] = start +1;
-                    answer[1] = end +1;
+        for(int i = 0 ; i < room_number.length ; i++) {
+            if(check[(int)room_number[i]] == false) {
+                check[(int)room_number[i]] = true;
+                answer[i] = room_number[i];
+            } else {
+                long next = room_number[i];
+                while(check[(int)next]) {
+                    next++;
                 }
-
-                map.put(gems[start], map.get(gems[start])-1);
-
-                if(map.get(gems[start]) == 0) {
-                    map.remove(gems[start]);
-                }
-                start++;
+                check[(int)next] = true;
+                answer[i] = next;
             }
-            end++;
         }
-
-
 
         return answer;
-    }
-
-    public static void main(String[] args) {
-
     }
 
 }
