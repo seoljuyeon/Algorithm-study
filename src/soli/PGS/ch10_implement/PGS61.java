@@ -3,7 +3,7 @@ package soli.PGS.ch10_implement;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class PGS58 {
+public class PGS61 {
 
     int[] dx = {-1, 1, 0, 0};
     int[] dy = {0, 0, -1, 1};
@@ -56,9 +56,9 @@ public class PGS58 {
     }
 
     public static void main(String[] args) {
-        PGS58 pgs58 = new PGS58();
+        PGS61 pgs61 = new PGS61();
 
-        System.out.println(pgs58.solution(new int[][]{{1,0,1,1,1},{1,0,1,0,1},{1,0,1,1,1},{1,1,1,0,1},{0,0,0,0,1}}));
+        System.out.println(pgs61.solution(new int[][]{{1,0,1,1,1},{1,0,1,0,1},{1,0,1,1,1},{1,1,1,0,1},{0,0,0,0,1}}));
 
     }
 
