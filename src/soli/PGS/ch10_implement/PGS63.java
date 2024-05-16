@@ -1,6 +1,6 @@
 package soli.PGS.ch10_implement;
 
-public class PGS620 {
+public class PGS63 {
     public String solution(String number, int k) {
 
         StringBuilder sb = new StringBuilder();
@@ -25,7 +25,7 @@ public class PGS620 {
 
 
     public static void main(String[] args) {
-        PGS620 pgs620 = new PGS620();
+        PGS63 pgs620 = new PGS63();
 
         System.out.println(pgs620.solution("1924", 2));
 
