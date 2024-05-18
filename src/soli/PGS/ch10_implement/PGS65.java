@@ -3,6 +3,13 @@ package soli.PGS.ch10_implement;
 import java.util.*;
 
 public class PGS65 {
+
+    public static void main(String[] args) {
+        PGS65 pgs65 = new PGS65();
+
+        System.out.println(pgs65.solution(new String[]{"muzi", "frodo", "apeach", "neo"}, new String[]{"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"}, 2));
+    }
+
     public int[] solution(String[] id_list, String[] report, int k) {
 
         int[] answer = new int[id_list.length];
