@@ -27,7 +27,7 @@ public class PGS65 {
 
 
         for(String key : map.keySet()) {
-            if(map.get(key) >=2) {
+            if(map.get(key) >=k) {
                 for(String s : set) {
                     String[] arr = s.split(" ");
                     String a = arr[0];
