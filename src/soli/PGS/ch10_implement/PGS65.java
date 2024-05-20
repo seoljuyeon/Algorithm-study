@@ -12,28 +12,29 @@ public class PGS65 {
 
     public int[] solution(String[] id_list, String[] report, int k) {
 
+        Set<String> set = new HashSet<>(Arrays.asList(report));
+
         int[] answer = new int[id_list.length];
 
-        Map<String, String> map = new HashMap<>();
-        for(String r : report) {
-            String[] arr = r.split(" ");
+        Map<String, Integer> map = new HashMap<>();
+        for(String s : set) {
+            String[] arr = s.split(" ");
             String key = arr[0];
             String value = arr[1];
 
-            map.put(key, value);
+            map.put(value, map.getOrDefault(value, 0)+1);
         }
 
-        Map<String, Integer> map2 = new HashMap<>();
+
         for(String key : map.keySet()) {
-            map2.put(map.get(key), map2.getOrDefault(map.get(key), 0) +1);
-        }
-
-        for(String key : map2.keySet()) {
-            if(map2.get(key) >=2) {
-                for(String key2 : map.keySet()) {
-                    if(map.get(key2).equals(key)) {
+            if(map.get(key) >=2) {
+                for(String s : set) {
+                    String[] arr = s.split(" ");
+                    String a = arr[0];
+                    String b = arr[1];
+                    if(key.equals(b)) {
                         for(int i = 0 ; i < id_list.length ; i++) {
-                            if(id_list[i].equals(key2)) {
+                            if(id_list[i].equals(a)) {
                                 answer[i]++;
                             }
                         }
