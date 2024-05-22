@@ -1,5 +1,7 @@
 package soli.PGS.ch11_kakao;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,20 +21,43 @@ public class PGS67 {
         // 결과 return x
 
         // 입차
-        Map<String, String> in = new HashMap<>();
+        Map<String, ArrayList<String>> in = new HashMap<>();
 
         // 출차
-        Map<String, String> out = new HashMap<>();
+        Map<String, ArrayList<String>> out = new HashMap<>();
 
+        ArrayList<String> list = new ArrayList<>();
 
         for(String record : records) {
+
+//            ArrayList<String> list = new ArrayList<>();
+
             // {시각, 번호, 내역}
             String[] arr = record.split(" ");
 
+            String car = arr[1];
+            String time = arr[0];
+            String act = arr[2];
 
+            if(act.equals("IN")){
+                list.add(time);
+                in.put(car, list);
+            }
+            else if(act.equals("OUT")) {
+                list.add(time);
+                out.put(car, list);
+            }
+        }
+        int[] answer = new int[in.size()];
+
+        for(int i = 0 ; i < in.size() ; i++) {
+
+            for(String key : in.keySet()) {
+
+            }
 
         }
-        int[] answer = {};
+
         return answer;
     }
 
