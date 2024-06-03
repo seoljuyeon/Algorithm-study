@@ -4,54 +4,61 @@ import java.util.*;
 
 public class PGS71 {
 
-    public String solution(String input_string){
+    static int[] dx = {-1, 1,0, 0};
+    static int[] dy = {0, 0, -1, 1};
 
-        // 한 번씩 나타나도 외톨이란다...
-        // 부분 부분 나눠져 있어도 char 자체를 외톨이라 함
-        StringBuilder sb = new StringBuilder();
+    static int[][] gBoard;
 
-        Map<Character, Boolean> map = new HashMap<>();
+    public int solution(int[][] board, int[] aloc, int[] bloc) {
 
-        Set<Character> set = new HashSet<>();
 
-        char[] c = input_string.toCharArray();
 
-        char current = c[0];
+        gBoard = board;
+        return 0;
+    }
 
-        map.put(current, true);
+    public void dfs(int[] aloc, int[] bloc, int count) {
 
-        for(int i = 1 ; i < c.length ; i++) {
-            char temp = c[i];
-            // 연속인지 아닌지 확인
-            if(current != temp) {
-                // 연속 아니고 앞에 나온 적 있으면
-                if(map.containsKey(temp)) {
-                    // 외톨이 추가
-                    set.add(temp);
-                }
-                map.put(temp, true);
-                current = temp;
+        int ax = aloc[0];
+        int ay = aloc[1];
+        int bx = bloc[0];
+        int by = bloc[1];
+
+        for(int i = 0 ; i < 4 ; i++) {
+            int nax = ax + dx[i];
+            int nay = ay + dy[i];
+            int nbx = bx + dx[i];
+            int nby = by + dy[i];
+
+            if (nax < 0 || nay < 0 || nax >= gBoard.length || nay >= gBoard[0].length || gBoard[nax][nay] == 0 ||nbx < 0 || nby < 0 || nbx >= gBoard.length || nby >= gBoard[0].length || gBoard[nbx][nby] == 0) {
+                continue;
             }
         }
+    }
 
-        List<Character> list = new ArrayList<>(set);
-        Collections.sort(list);
 
-        for(char ch : list) {
-            sb.append(ch);
-        }
-
-        if((sb.toString()).equals("")) return "N";
-
-        return sb.toString();
     }
 
     public static void main(String[] args) {
-        PGS71 pgs71 = new PGS71();
-        System.out.println(pgs71.solution("edeaaabbccd"));  // Output: "de"
-        System.out.println(pgs71.solution("eeddee"));       // Output: "e"
-        System.out.println(pgs71.solution("string"));       // Output: "N"
-        System.out.println(pgs71.solution("zbzbz"));        // Output: "bz"
+        PGS71 sol = new PGS71();
+        int[][] board1 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+        int[] aloc1 = {1, 0};
+        int[] bloc1 = {1, 2};
+        System.out.println(sol.solution(board1, aloc1, bloc1));  // Output: 5
 
+        int[][] board2 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+        int[] aloc2 = {1, 0};
+        int[] bloc2 = {1, 2};
+        System.out.println(sol.solution(board2, aloc2, bloc2));  // Output: 4
+
+        int[][] board3 = {{1, 1, 1, 1, 1}};
+        int[] aloc3 = {0, 0};
+        int[] bloc3 = {0, 4};
+        System.out.println(sol.solution(board3, aloc3, bloc3));  // Output: 4
+
+        int[][] board4 = {{1}};
+        int[] aloc4 = {0, 0};
+        int[] bloc4 = {0, 0};
+        System.out.println(sol.solution(board4, aloc4, bloc4));  // Output: 0
     }
 }
