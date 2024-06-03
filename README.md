@@ -1,5 +1,6 @@
 # Java Coding Test 👩‍💻🧑‍💻
 코딩 테스트를 위한 스터디입니다. <br/>
+길벗 `프로그래머스 코딩 테스트 문제 풀이 전략: 자바편` 을 참고하여 스터디를 진행중입니다.<br/>
 [🔗 DoitJavaCote (~240105)](https://github.com/NtoZero/DoitJavaCote)
 
 <br/>
