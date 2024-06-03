@@ -37,7 +37,7 @@ public class PGS71 {
     }
 
 
-    }
+
 
     public static void main(String[] args) {
         PGS71 sol = new PGS71();
