@@ -20,7 +20,7 @@ public class P01_교점에_별_만들기_2 {
     private static String[] solution(int[][] line) {
         String[] answer = {};
 
-        Set<long[]> set = new HashSet<>();
+        Set<List<Long>> set = new HashSet<>();
 
         for (int i = 0; i < line.length - 1; i++) {
 
@@ -45,7 +45,7 @@ public class P01_교점에_별_만들기_2 {
                 long x = bfce / m;
                 long y = cdaf / m;
 
-                set.add(new long[]{x, y});
+                set.add(Arrays.asList(x, y));
 
                 maxx = Math.max(maxx, x);
                 minx = Math.min(minx, x);
@@ -69,9 +69,9 @@ public class P01_교점에_별_만들기_2 {
         Arrays.fill(answer, sb.toString());
 
         long nx, ny;
-        for (long[] p : set) {
-            nx = p[0] - minx;
-            ny = maxy - p[1];
+        for (List<Long> p : set) {
+            nx = p.get(0) - minx;
+            ny = maxy - p.get(1);
 
             sb = new StringBuilder(answer[(int) ny]);
 
