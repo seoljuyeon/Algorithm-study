@@ -46,7 +46,7 @@ public class PGS1_교점에별만들기 {
             minX = Math.min(minX, x);
             maxX = Math.max(maxX, x);
             minY = Math.min(minY, y);
-            minY = Math.max(maxY, y);
+            maxY = Math.max(maxY, y);
         }
 
         int width = maxX - minX + 1;
@@ -61,7 +61,7 @@ public class PGS1_교점에별만들기 {
         for(int[] l : list) {
             int x = l[0] - minX;
             int y = maxY - l[1];
-            answer[x][y] = '*';
+            answer[y][x] = '*';
         }
 
         String[] result = new String[height];
