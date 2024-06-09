@@ -1,6 +1,7 @@
 package soli.PGS2.ch1_array;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class PGS2_삼각달팽이 {
@@ -42,6 +43,10 @@ public class PGS2_삼각달팽이 {
     }
 
     public static void main(String[] args) {
+        PGS2_삼각달팽이 pgs2 = new PGS2_삼각달팽이();
 
+        System.out.println(Arrays.toString(pgs2.solution(4)));
+        System.out.println(Arrays.toString(pgs2.solution(5)));
+        System.out.println(Arrays.toString(pgs2.solution(6)));
     }
 }
