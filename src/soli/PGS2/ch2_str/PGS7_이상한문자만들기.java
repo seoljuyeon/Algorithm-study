@@ -26,7 +26,7 @@ public class PGS7_이상한문자만들기 {
     }
 
     public static void main(String[] args) {
-        PGS7 pgs7 = new PGS7();
+        PGS7_이상한문자만들기 pgs7 = new PGS7_이상한문자만들기();
 
         System.out.println("Test Case1 : " + pgs7.solution("try hello world"));
         System.out.println("Test Case2 : " + pgs7.solution("space  bar  here  "));
