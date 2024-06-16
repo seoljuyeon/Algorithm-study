@@ -74,11 +74,6 @@ public class PGS1_교점에별만들기 {
 
     }
 
-    public boolean isInteger(long x, long y) {
-        if (x == (int) x && y == (int) y) return true;
-        else return false;
-    }
-
     public static void main(String[] args) {
         PGS1_교점에별만들기 sol = new PGS1_교점에별만들기();
 
