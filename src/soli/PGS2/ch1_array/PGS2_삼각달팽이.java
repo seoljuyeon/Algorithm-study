@@ -11,7 +11,7 @@ public class PGS2_삼각달팽이 {
         int value = 1;
         int x = 0, y = 0;
 
-        // 방향: 아래(0), 오른쪽(1), 위쪽(2)
+        // 방향: 아래, 오른쪽, 위쪽
         int[] dx = {1, 0, -1};
         int[] dy = {0, 1, -1};
         int direction = 0;
