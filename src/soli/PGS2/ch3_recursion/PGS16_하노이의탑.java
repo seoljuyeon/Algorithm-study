@@ -31,7 +31,7 @@ public class PGS16_하노이의탑 {
 
     public static void main(String[] args) {
         PGS16_하노이의탑 pgs16 = new PGS16_하노이의탑();
-        int[][] solution = pgs16.solution(3);
+        int[][] solution = pgs16.solution(4);
 
         // 2차원 배열을 반복하여 각 하위 배열을 문자열로 변환 후 출력
         for (int[] move : solution) {
