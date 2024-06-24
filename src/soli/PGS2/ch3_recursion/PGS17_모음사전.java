@@ -4,35 +4,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PGS17_모음사전 {
-    static String[] arr;
-    static List<String> list;
+    static String[] alp;
+    static ArrayList<String> A;
+
     public static int solution(String word) {
-        int answer = 0;
 
-        list = new ArrayList<>();
-        arr = new String[]{"A", "E", "I", "O", "U"};
-        // 완전탐색 메서드 호출
-        recursion(word, "", 0);
+        alp = new String[]{"A","E","I","O","U"};
+        A = new ArrayList<>();
 
-        // 선형 탐색
-        for (int i = 0; i < list.size(); i++) {
-            if(list.get(i).equals(word)) {
-                answer = i;
-                break;
-            }
+        String str = "";
+        int len = 0;
+
+        recursion(str, len);
+
+        for(int i = 0 ; i < A.size(); i++) {
+            if(A.get(i).equals(word)) return i;
         }
-        return answer;
+        return 0;
     }
 
-    static void recursion(String word, String str, int depth) {
-        list.add(str);
+    public static void recursion(String str, int len) {
 
-        if(depth == 5) {
+        A.add(str);
+
+        if(len == 5) {
             return;
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            recursion(word, str + arr[i], depth + 1);
+        for(int i = 0 ; i < alp.length ; i++) {
+            recursion(str + alp[i], len + 1);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        // 테스트 케이스
+        String[] testCases = {"AAAAE", "AAAE", "I", "EIO","AE"};
+        for (String word : testCases) {
+            System.out.println(word + ": " + solution(word));
         }
     }
 }
