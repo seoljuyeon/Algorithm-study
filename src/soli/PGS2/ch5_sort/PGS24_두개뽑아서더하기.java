@@ -1,7 +1,5 @@
 package soli.PGS2.ch5_sort;
 
-import soli.PGS.ch_array.PGS24;
-
 import java.util.*;
 
 public class PGS24_두개뽑아서더하기 {
