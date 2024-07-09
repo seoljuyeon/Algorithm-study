@@ -1,9 +1,9 @@
-package soli.ALC;
+package soli.ELC;
 
 import java.io.*;
 import java.util.*;
 
-public class ALC2_정리정돈을좋아하는K씨 {
+public class ELC2_정리정돈을좋아하는K씨 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
