@@ -2,7 +2,7 @@ package soli.PGS2.ch6_binary_search;
 
 import java.util.*;
 
-public class PGS30 {
+public class PGS30_순위검색 {
 
     static HashMap<String, List<Integer>> map;
 
@@ -52,7 +52,7 @@ public class PGS30 {
                 List<Integer> list = new ArrayList<Integer>();
                 map.put(q, list);
             }
-            map.get(q).add(Integer.parseInt(s[4])); // 점수
+            map.get(q).add(Integer.parseInt(s[4]));
             return;
         }
         dfs(s, q+"-" , depth+1);
