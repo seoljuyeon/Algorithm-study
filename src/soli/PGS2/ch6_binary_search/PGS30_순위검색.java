@@ -12,52 +12,62 @@ public class PGS30_순위검색 {
         map = new HashMap<String, List<Integer>>();
 
         for(int i = 0 ; i < info.length ; i++) {
-            String[] s = info[i].split(" ");
-            dfs(s, "", 0);
+            String[] q = info[i].split(" ");
+            // dfs 돌면서 info 내 모든 조건을 생성하게 함
+            dfs(q, "", 0);
         }
 
-        for(String key : map.keySet()) {
+        // 조건 조합에 대해 점수 리스트 정렬
+        // 이진탐색을 위해서는 리스트가 정렬되어 있어야 한다.
+        for(String key : map.keySet()){
             Collections.sort(map.get(key));
         }
 
+        // 쿼리 배열 돌면서 쿼리 처리
         for(int i = 0 ; i < query.length ; i++) {
             query[i] = query[i].replaceAll(" and ", "");
+            // 숫자 앞까지 전부 하나로
             String[] q = query[i].split(" ");
-            answer[i] = map.containsKey(q[0]) ? binarySearch(q[0], Integer.parseInt(q[1])) : 0;
+            // 조건에 해당하는 리스트 있으면 점수(q[1])를 통해 이진탐색으로 결과 계산, 없으면 0
+            answer[i] = map.containsKey(q[0])? binarySearch(q[0], Integer.parseInt(q[1])) : 0;
         }
 
         return answer;
-
     }
 
-    private static int binarySearch(String key, int score) {
-        List<Integer> list = map.get(key);
-        int start = 0, end = list.size() - 1;
-
-        while (start <= end) {
-            int mid = (start + end) / 2;
-            if (list.get(mid) < score)
-                start = mid + 1;
-            else
-                end = mid - 1;
-        }
-
-        return list.size() - start;
-    }
-
-
-    public static void dfs(String[] s, String q, int depth) {
+    public static void dfs(String[] q, String s, int depth){
         if(depth == 4) {
-            if(!map.containsKey(q)){
+            // 조합에 q 가 없으면 추가
+            if(!map.containsKey(s)){
                 List<Integer> list = new ArrayList<Integer>();
-                map.put(q, list);
+                map.put(s, list);
             }
-            map.get(q).add(Integer.parseInt(s[4]));
+            // 해당 조건 조합에 점수 추가
+            // 왜..?
+            map.get(s).add(Integer.parseInt(q[4]));
             return;
         }
-        dfs(s, q+"-" , depth+1);
-        dfs(s, q+s[depth], depth+1);
+        // 단어 + "-" 조합 만들기...
+        dfs(q, s+"-", depth+1);
+        // 단어 + 단어 조합 만들기
+        dfs(q, s+q[depth], depth+1);
     }
+
+    public static int binarySearch(String key, int score) {
+        List<Integer> list = map.get(key);
+        int start = 0;
+        int end = list.size() - 1;
+
+        while(start <= end) {
+            int mid = (start + end) / 2;
+            if(list.get(mid) < score) start = mid +1;
+            else end = mid - 1;
+        }
+        // 주어진 점수 이상인 지원자의 수 반환
+        return list.size() - start;
+
+    }
+
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution(    // [1,1,1,1,2,4]
