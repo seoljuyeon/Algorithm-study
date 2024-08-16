@@ -20,6 +20,7 @@ public class PGS36_A로B만들기 {
         if(bmap.equals(amap)) return answer= 1;
 
         return answer;
+
     }
 
     public static void main(String[] args) {

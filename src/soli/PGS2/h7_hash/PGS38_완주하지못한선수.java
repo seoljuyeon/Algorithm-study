@@ -20,13 +20,13 @@ public class PGS38_완주하지못한선수 {
         }
 
         for(String str : map.keySet()) {
-            // 0이 아니면 완주 못한 거
             if(map.get(str) != 0) {
                 answer = str;
             }
         }
 
         return answer;
+        // return map.keySet().iterator().next();
     }
 
     public static void main(String[] args) {
