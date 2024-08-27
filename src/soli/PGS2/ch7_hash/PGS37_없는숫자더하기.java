@@ -1,4 +1,4 @@
-package soli.PGS2.h7_hash;
+package soli.PGS2.ch7_hash;
 
 import java.util.HashSet;
 import java.util.Set;

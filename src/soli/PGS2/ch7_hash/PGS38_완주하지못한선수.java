@@ -1,6 +1,4 @@
-package soli.PGS2.h7_hash;
-
-import soli.PGS.ch7_hash.PGS37;
+package soli.PGS2.ch7_hash;
 
 import java.util.HashMap;
 import java.util.Map;
