@@ -1,4 +1,4 @@
-package soli.PGS2.h7_hash;
+package soli.PGS2.ch7_hash;
 
 public class PGS33_평행 {
     public static int solution(int[][] dots) {
