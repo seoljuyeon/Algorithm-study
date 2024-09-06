@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class PGS50_디스크컨트롤러 {
+public class PGS51_디스크컨트롤러 {
 
     public int solution(int[][] jobs) {
 
@@ -46,8 +46,7 @@ public class PGS50_디스크컨트롤러 {
     }
 
     public static void main(String[] args) {
-        PGS50_디스크컨트롤러 pgs50 = new PGS50_디스크컨트롤러();
-        System.out.println("TEST CASE " + pgs50.solution(new int[][]{{0,3},{1,9},{2,9}}));
+        PGS51_디스크컨트롤러 pgs51 = new PGS51_디스크컨트롤러();
+        System.out.println("TEST CASE " + pgs51.solution(new int[][]{{0,3},{1,9},{2,9}}));
     }
-
 }
