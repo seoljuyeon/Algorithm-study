@@ -27,6 +27,21 @@ public class PGS56_스킬트리 {
 
     }
 
+//    public int solution(String skill, String[] skill_trees) {
+//        int answer = 0;
+//        ArrayList<String> skillTrees = new ArrayList<String>(Arrays.asList(skill_trees));
+//
+//        Iterator<String> it = skillTrees.iterator();
+//
+//        while (it.hasNext()) {
+//            if (skill.indexOf(it.next().replaceAll("[^" + skill + "]", "")) != 0) {
+//                it.remove();
+//            }
+//        }
+//        answer = skillTrees.size();
+//        return answer;
+//    }
+
     public static void main(String[] args) {
         PGS56_스킬트리 pgs56 = new PGS56_스킬트리();
 
