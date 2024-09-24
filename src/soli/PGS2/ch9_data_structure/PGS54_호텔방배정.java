@@ -34,6 +34,4 @@ public class PGS54_호텔방배정 {
         System.out.println(Arrays.toString(pgs54.solution(10, new long[]{1, 3, 4, 1, 3, 1}))); // 1, 3, 4, 2, 5, 6
     }
 
-
-
 }
