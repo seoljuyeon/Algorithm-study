@@ -1,4 +1,4 @@
-package juyeon.PGS.drill;
+package juyeon.PGS.drill.lv2;
 
 public class PGS_큰_수_만들기 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package juyeon.PGS.drill;
+package juyeon.PGS.drill.lv2;
 
 public class PGS_타겟_넘버 {
     public static void main(String[] args) {

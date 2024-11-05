@@ -1,4 +1,4 @@
-package juyeon.PGS.drill;
+package juyeon.PGS.drill.lv3;
 
 public class PGS_네트워크 {
     public static void main(String[] args) {

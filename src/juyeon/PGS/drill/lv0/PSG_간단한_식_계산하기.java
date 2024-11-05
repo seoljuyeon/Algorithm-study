@@ -1,4 +1,4 @@
-package juyeon.PGS.drill;
+package juyeon.PGS.drill.lv0;
 
 public class PSG_간단한_식_계산하기 {
     public static void main(String[] args) {
