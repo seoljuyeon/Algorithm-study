@@ -1,10 +1,15 @@
 package juyeon.PGS.drill.lv2;
 
-public class PGS_피로도 {
-    public static void main(String[] args) {
-        PGS_피로도 pgs_피로도 = new PGS_피로도();
+import org.junit.jupiter.api.Test;
 
-        System.out.println(pgs_피로도.solution(80, new int[][]{{80, 20}, {50, 40}, {30, 10}})); // 3
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class PGS_피로도 {
+    @Test
+    public void test() {
+        PGS_피로도 pgs_피로도 = new PGS_피로도();
+        int result = pgs_피로도.solution(80, new int[][]{{80, 20}, {50, 40}, {30, 10}});
+        assertEquals(3, result);
     }
 
     int count;
